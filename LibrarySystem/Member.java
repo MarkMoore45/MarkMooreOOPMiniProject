@@ -9,7 +9,7 @@ public class Member {
     private String email;
     private String address;
     private int phone;
-    private static int count = 0;
+    private static int count = 1;
 
     public  Member(){
         this("NA","NA","NA","NA","NA",0);
@@ -83,9 +83,8 @@ public class Member {
 
     @Override
     public String toString() {
-        return "Member Details\n" +
-                "\nMemberID: " + getMemberID() +
-                "\nForename: '" + getForename() +
+        return "\nMemberID: " + getMemberID() +
+                "\nForename: " + getForename() +
                 "\nSurname: " + getSurname() +
                 "\nPassword: " + getPassword() +
                 "\nE-mail: " + getEmail() +

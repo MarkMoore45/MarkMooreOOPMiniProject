@@ -7,23 +7,22 @@ public class Book {
     private String title;
     private String author;
     private String genre;
-    private double price;
     private int pages;
     private char status;
-    private static int count = 0;
+    private static int count = 1;
 
     public Book(){
-        this("NA","NA","NA","NA",0.0,0,'U');
+        this("NA","NA","NA","NA",0,'U');
     }
 
 
-    public Book(String ISBN, String title, String author, String genre, double price, int pages, char status) {
+    public Book(String ISBN, String title, String author, String genre, int pages, char status) {
         setBookID();
         setISBN(ISBN);
         setTitle(title);
         setAuthor(author);
         setGenre(genre);
-        setPrice(price);
+
         setPages(pages);
         setStatus(status);
     }
@@ -68,14 +67,6 @@ public class Book {
         this.genre = genre;
     }
 
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
     public int getPages() {
         return pages;
     }
@@ -94,13 +85,11 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Book Details\n" +
-                "\nBookID: " + getBookID() +
+        return "\nBookID: " + getBookID() +
                 "\nISBN: " + getISBN() +
                 "\nTitle: " + getTitle() +
                 "\nAuthor: " + getAuthor() +
                 "\nGenre: " + getGenre() +
-                "\nPrice: " + getPrice() +
                 "\nPages: " + getPages() +
                 "\nStatus: " + getStatus();
     }
